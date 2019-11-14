@@ -1,0 +1,20 @@
+void setup()
+{
+  Serial.begin(9600);
+  pinMode(13, OUTPUT);
+}
+
+void loop()
+{
+  int d=analogRead(A0);
+  Serial.print(d);
+  Serial.print("\n");
+  if(d>500)
+  {   
+  digitalWrite(13, HIGH);
+  }
+  else
+  {    
+  digitalWrite(13, LOW); 
+  }
+}
